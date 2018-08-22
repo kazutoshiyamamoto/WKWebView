@@ -36,8 +36,11 @@
 	</array>
 	<key>NSAppTransportSecurity</key>
 	<dict>
-		<key>NSAllowsArbitraryLoads</key>
-		<true/>
+		<key>NSExceptionDomains</key>
+		<dict>
+			<key>www.tobikan.jp</key>
+			<string></string>
+		</dict>
 	</dict>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
