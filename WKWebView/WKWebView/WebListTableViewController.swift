@@ -26,6 +26,13 @@ class WebListTableViewController: UITableViewController {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
+    
+    // セクション内の行数
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // #warning Incomplete implementation, return the number of rows
+        // 配列webListの値の個数
+        return webList.count
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,10 +51,7 @@ class WebListTableViewController: UITableViewController {
 
 
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
-    }
+
 
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
