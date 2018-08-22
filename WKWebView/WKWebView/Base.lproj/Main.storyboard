@@ -43,7 +43,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="zEc-Cd-b8x"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="showWebPage" id="zEc-Cd-b8x"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
