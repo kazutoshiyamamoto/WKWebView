@@ -12,6 +12,7 @@
 		FDE7601F212D96FD00E71C23 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDE7601D212D96FD00E71C23 /* Main.storyboard */; };
 		FDE76021212D96FF00E71C23 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDE76020212D96FF00E71C23 /* Assets.xcassets */; };
 		FDE76024212D96FF00E71C23 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDE76022212D96FF00E71C23 /* LaunchScreen.storyboard */; };
+		FDE7602C212D9AB000E71C23 /* WebListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE7602B212D9AB000E71C23 /* WebListTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		FDE76020212D96FF00E71C23 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FDE76023212D96FF00E71C23 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FDE76025212D96FF00E71C23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FDE7602B212D9AB000E71C23 /* WebListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebListTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 				FDE76019212D96FD00E71C23 /* AppDelegate.swift */,
 				FDE7601B212D96FD00E71C23 /* ViewController.swift */,
 				FDE7601D212D96FD00E71C23 /* Main.storyboard */,
+				FDE7602B212D9AB000E71C23 /* WebListTableViewController.swift */,
 				FDE76020212D96FF00E71C23 /* Assets.xcassets */,
 				FDE76022212D96FF00E71C23 /* LaunchScreen.storyboard */,
 				FDE76025212D96FF00E71C23 /* Info.plist */,
@@ -137,6 +140,7 @@
 			files = (
 				FDE7601C212D96FD00E71C23 /* ViewController.swift in Sources */,
 				FDE7601A212D96FD00E71C23 /* AppDelegate.swift in Sources */,
+				FDE7602C212D9AB000E71C23 /* WebListTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
