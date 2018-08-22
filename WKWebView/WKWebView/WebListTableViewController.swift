@@ -18,6 +18,14 @@ class WebListTableViewController: UITableViewController {
         (name: "東京都美術館", url:"http://www.tobikan.jp"),
         (name: "amazon", url:"https://www.amazon.co.jp")
     ]
+    
+    // MARK: - Table view data source
+    
+    // セクションの個数
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        // #warning Incomplete implementation, return the number of sections
+        return 1
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,12 +42,7 @@ class WebListTableViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
