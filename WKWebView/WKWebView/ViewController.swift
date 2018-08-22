@@ -11,9 +11,10 @@ import WebKit
 
 class ViewController: UIViewController {
 
-    
     @IBOutlet weak var webView: WKWebView!
     
+    // シーン移動の際に設定されるWebデータ
+    var data: (name: String, url: String)?
     
     override func viewDidLoad() {
         super.viewDidLoad()
