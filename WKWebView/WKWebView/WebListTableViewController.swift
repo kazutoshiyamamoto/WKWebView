@@ -33,6 +33,19 @@ class WebListTableViewController: UITableViewController {
         // 配列webListの値の個数
         return webList.count
     }
+    
+    // セルを作る
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        // テーブルのセルを参照
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        
+        // テーブルにwebListのデータを表示
+        let webData = webList[(indexPath as NSIndexPath).row]
+        cell.textLabel?.text = webData.name
+        cell.detailTextLabel?.text = webData.url
+        
+        return cell
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,15 +66,7 @@ class WebListTableViewController: UITableViewController {
 
 
 
-    /*
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
 
-        // Configure the cell...
-
-        return cell
-    }
-    */
 
     /*
     // Override to support conditional editing of the table view.
