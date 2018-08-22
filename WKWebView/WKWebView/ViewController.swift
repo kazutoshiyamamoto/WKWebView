@@ -19,6 +19,16 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        // dataが設定されていればwebDataに代入する
+        guard let webData = data else {
+            return
+        }
+        // 表示するWebページのURLRequestを作る
+        let myURL = URL(string: webData.url)
+        let myRequest = URLRequest(url: myURL!)
+        // Webを読み込む
+        webView.load(myRequest)
     }
 
     override func didReceiveMemoryWarning() {
