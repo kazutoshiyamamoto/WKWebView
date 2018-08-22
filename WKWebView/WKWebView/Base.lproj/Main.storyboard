@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--Webリスト-->
         <scene sceneID="Vo2-eS-6EP">
             <objects>
                 <tableViewController id="qbB-5I-bmt" sceneMemberID="viewController">
@@ -33,7 +33,7 @@
                             <outlet property="delegate" destination="qbB-5I-bmt" id="sJk-no-b1D"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="D9z-OG-qLm"/>
+                    <navigationItem key="navigationItem" title="Webリスト" id="D9z-OG-qLm"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FlA-ip-FcM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
