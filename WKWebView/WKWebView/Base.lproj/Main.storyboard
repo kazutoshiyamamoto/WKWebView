@@ -42,6 +42,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="zEc-Cd-b8x"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
