@@ -15,9 +15,10 @@ class WebListTableViewController: UITableViewController {
     let webList = [
         (name: "アップル", url:"https://www.apple.com/jp/"),
         (name: "国立天文台", url:"https://www.nao.ac.jp"),
-        (name: "東京都美術館", url:"https://www.tobikan.jp"),
+        (name: "東京都美術館", url:"https://www.tobikan.jp/"),
         (name: "amazon", url:"https://www.amazon.co.jp"),
-        (name: "はてなブックマーク", url:"http://b.hatena.ne.jp/")
+        (name: "はてなブックマーク", url:"http://b.hatena.ne.jp/"),
+        (name: "ブランディアオークション", url:"https://sa.brandear.jp/")
     ]
     
     // MARK: - Table view data source
