@@ -36,13 +36,7 @@ class ViewController: UIViewController {
         // 表示するWebページのURLRequestを作る
         let myURL = URL(string: webData.url)
         let myRequest = URLRequest(url: myURL!)
-        
-//        let encodeURL = webData.url
-//        let myRequest = encodeURL.addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlFragmentAllowed)
-//        let myRequest2 = URL(string: myRequest!)
-//
-//        let test = URLRequest(url: myRequest2!)
-        
+                
         // Webを読み込む
         webView.load(myRequest)
     }
