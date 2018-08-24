@@ -16,10 +16,19 @@ class ViewController: UIViewController {
     // シーン移動の際に設定されるWebデータ
     var data: (name: String, url: String)?
     
+    override func loadView() {
+        super.loadView()
+        let webConfiguration = WKWebViewConfiguration()
+        webView = WKWebView(frame: .zero, configuration: webConfiguration)
+        webView.uiDelegate = self
+        webView.navigationDelegate = self
+        self.view = webView
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
+    
         // dataが設定されていればwebDataに代入する
         guard let webData = data else {
             return
@@ -44,5 +53,14 @@ class ViewController: UIViewController {
     }
 
 
+}
+
+extension ViewController: WKUIDelegate {
+    
+}
+
+extension ViewController: WKNavigationDelegate {
+
+    
 }
 
