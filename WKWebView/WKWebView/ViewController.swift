@@ -60,7 +60,19 @@ extension ViewController: WKUIDelegate {
 }
 
 extension ViewController: WKNavigationDelegate {
-
+    // 読み込み開始時イベント
+    func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
+        print("start")
+    }
     
+    // 読み込み終了時イベント
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        print("finish")
+    }
+    
+    // 読み込み失敗時イベント
+    func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
+        print("fail")
+    }
 }
 
