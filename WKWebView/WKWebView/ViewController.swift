@@ -36,7 +36,7 @@ class ViewController: UIViewController {
         // 表示するWebページのURLRequestを作る
         let myURL = URL(string: webData.url)
         let myRequest = URLRequest(url: myURL!)
-                
+        
         // Webを読み込む
         webView.load(myRequest)
     }
@@ -53,6 +53,7 @@ extension ViewController: WKUIDelegate {
     
 }
 
+// http://begigrammer.hatenablog.com/entry/2017/03/14/215153
 extension ViewController: WKNavigationDelegate {
     // 読み込み開始時イベント
     func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
@@ -68,5 +69,11 @@ extension ViewController: WKNavigationDelegate {
     func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
         print("fail")
     }
+    
+    // リダイレクト先のURLを取得
+    func webView(_ webView: WKWebView, didReceiveServerRedirectForProvisionalNavigation navigation: WKNavigation!) {
+        print(webView.url?.absoluteString as Any)
+    }
+    
 }
 
