@@ -10,7 +10,7 @@ import UIKit
 import WebKit
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet weak var webView: WKWebView!
     
     // シーン移動の際に設定されるWebデータ
@@ -18,17 +18,19 @@ class ViewController: UIViewController {
     
     override func loadView() {
         super.loadView()
+        
         let webConfiguration = WKWebViewConfiguration()
         webView = WKWebView(frame: .zero, configuration: webConfiguration)
+        self.view = webView
+        
         webView.uiDelegate = self
         webView.navigationDelegate = self
-        self.view = webView
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-    
+        
         // dataが設定されていればwebDataに代入する
         guard let webData = data else {
             return
@@ -40,15 +42,21 @@ class ViewController: UIViewController {
         // Webを読み込む
         webView.load(myRequest)
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
 }
 
+// target=_blankが埋め込まれたページを表示する
 extension ViewController: WKUIDelegate {
-    
+    func webView(_ webView: WKWebView, createWebViewWith configuration: WKWebViewConfiguration, for navigationAction: WKNavigationAction, windowFeatures: WKWindowFeatures) -> WKWebView? {
+        if navigationAction.targetFrame == nil {
+            webView.load(navigationAction.request)
+        }
+        return nil
+    }
 }
 
 // 画面遷移時のイベント取得
