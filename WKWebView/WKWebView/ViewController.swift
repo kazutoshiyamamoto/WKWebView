@@ -45,35 +45,26 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
 }
 
 extension ViewController: WKUIDelegate {
     
 }
 
-// http://begigrammer.hatenablog.com/entry/2017/03/14/215153
+// 画面遷移時のイベント取得
 extension ViewController: WKNavigationDelegate {
-    // 読み込み開始時イベント
     func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
         print("start")
     }
-    
-    // 読み込み終了時イベント
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         print("finish")
     }
-    
-    // 読み込み失敗時イベント
     func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
         print("fail")
     }
     
-    // リダイレクト先のURLを取得
     func webView(_ webView: WKWebView, didReceiveServerRedirectForProvisionalNavigation navigation: WKNavigation!) {
         print(webView.url?.absoluteString as Any)
     }
-    
 }
 
