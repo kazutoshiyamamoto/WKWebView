@@ -28,6 +28,12 @@ class ViewController: UIViewController {
         
         // スワイプで戻る、進むを有効にする
         webView.allowsBackForwardNavigationGestures = true
+        
+        // リフレッシュコントロールの設定
+        self.webView.scrollView.bounces = true
+        let refreshControl = UIRefreshControl()
+        self.webView.scrollView.refreshControl = refreshControl
+        refreshControl.addTarget(self, action: #selector(ViewController.refreshWebView(sender:)), for: .valueChanged)
     }
     
     override func viewDidLoad() {
