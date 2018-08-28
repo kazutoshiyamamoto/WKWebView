@@ -56,6 +56,13 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    // スワイプでページをリロードする
+    @objc func refreshWebView(sender: UIRefreshControl) {
+        print("refersh")
+        webView.reload()
+        sender.endRefreshing()
+    }
 }
 
 // target=_blankが埋め込まれたページを表示する
