@@ -25,6 +25,9 @@ class ViewController: UIViewController {
         
         webView.uiDelegate = self
         webView.navigationDelegate = self
+        
+        // スワイプで戻る、進むを有効にする
+        webView.allowsBackForwardNavigationGestures = true
     }
     
     override func viewDidLoad() {
